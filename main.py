@@ -49,19 +49,20 @@ if __name__ == "__main__":
     smtp_server = os.environ["SMTP_SERVER"]
     smtp_port = os.environ["SMTP_PORT"]  # Port for TLS
     sender_password = os.environ["SENDER_PASSWORD"]
+    name = os.environ["YOUR_NAME"]
 
     subject = "Sending in resume for the Software developer position at your company."
     message = "This is a test email sent from Python."
 
     # Pipe my resume as an octet-stream for the attachment (Could have used application/pdf as well)
-    with open("./Pratham_Mittal_Resume.pdf", "rb") as attachment:
+    with open("./resume.pdf", "rb") as attachment:
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
     encoders.encode_base64(part)
 
     part.add_header(
         "Content-Disposition",
-        f"attachment; filename=Pratham_Mittal_Resume.pdf",  # Specify the filename here
+        f"attachment; filename={name}_resume.pdf",  # Specify the filename here
     )
 
     # pipe recievers email from emails.txt to this variable and for loop to send email to recievers

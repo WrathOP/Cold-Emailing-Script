@@ -1,4 +1,5 @@
 SMTP_SERVER=smtp.gmail.com
 SMTP_PORT=587
+YOUR_NAME=<Add-your-name-here>
 SENDER_EMAIL=<Add-your-email-here>
 SENDER_PASSWORD=<Add-password-to-your-email-here>
