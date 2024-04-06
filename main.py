@@ -32,10 +32,13 @@ def send_email(
     email.attach(MIMEText(message, "plain"))
 
     # Connect to the SMTP server
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()  # Start TLS encryption
-        server.login(sender_email, sender_password)  # Login to the SMTP server
-        server.send_message(email)  # Send the email
+    try: 
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()  # Start TLS encryption
+            server.login(sender_email, sender_password)  # Login to the SMTP server
+            server.send_message(email)  # Send the email
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
     print("Email sent successfully! to ", receiver_email)
 
