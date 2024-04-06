@@ -54,7 +54,7 @@ if __name__ == "__main__":
     sender_password = os.environ["SENDER_PASSWORD"]
     name = os.environ["YOUR_NAME"]
 
-    subject = "Sending in resume for the Software developer position at your company."
+    subject = "Test Subject"
     message = "This is a test email sent from Python."
 
     # Pipe my resume as an octet-stream for the attachment (Could have used application/pdf as well)
