@@ -9,7 +9,7 @@ from email import encoders
 import sqlite3
 
 # importing insert_emails_to_db function from insert-emails-to-db.py
-from insertEmailsToDB import insert_emails_to_db
+from insert_emails_into_db import insert_emails_to_db
 
 
 def send_email(

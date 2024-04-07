@@ -26,6 +26,13 @@ To send emails using this script, you'll need to generate an app password if you
 8. Copy the generated app password (a sixteen-digit password).
 9. Paste the app password into the `SENDER_PASSWORD` field in your `.env` file.
 
+## Setting Up the Database
+
+Before running the script, you need to set up an SQLite database to store sent emails. Follow these steps to set up the database:
+
+1. Run the `setup_database.py` script provided in this repository. This script will create the necessary database table and index for storing sent emails.
+2. Ensure you have the necessary permissions to create and modify files in the directory where the script is located.
+
 ## Running the Script
 
 After setting up your `.env` file and generating the app password, you can run the Python script to send emails using the configured settings.
